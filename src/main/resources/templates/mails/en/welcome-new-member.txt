@@ -1,0 +1,28 @@
+<html>
+<head><title>TraXem</title></head>
+<body>
+<p>Hi <strong>${userName}</strong></p>
+<p>Welcome to <strong>TraXem</strong></p>
+<br/>
+<p>Following is your account information, Please keep it in saved place. Thanks!
+<br/>
+<p> <b>Account Info:</b></p>
+<p> Username: <strong>${userName}</strong></p>
+<p> Password: <strong> ${password}</strong> </p>
+</p>
+<br/>
+<br/>
+<p>DO NOT REPLY THIS EMAIL, IT IS AN AUTO SYSTEM SENDING!</p>
+<p>This is a post-only mailing. Replies to this message are not monitored or answered.</p>
+<p>For questions or concerns about your account, please visit the TraXem Help Center at <a href="http://traxem.vn">http://traxem.vn</a></p>
+<br/>
+<p>Thank you very much!</p>
+<br/>
+<hr/>
+<p><strong>TraXem Team</strong></p>
+<p>Contact: <strong><i><a href="mailto:traxem@vsi-international.com">traxem@vsi-international.com</a></i></strong></p>
+<p>Site: <strong><i><a href="http://traxem.vn">http://traxem.vn</a></i></strong>
+<br/>
+<br/>
+</body>
+</html>

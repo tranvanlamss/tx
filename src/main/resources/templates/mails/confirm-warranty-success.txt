@@ -1,0 +1,30 @@
+<html>
+<head><title>Traxem</title></head>
+<body>
+<p>Hi <strong>${custName}</strong></p>
+<p>You have successfully activated warranty. </strong></p>
+<br/>
+
+<p>ProductionName: ${productionName}</p>
+<p>Date of warranty: ${dateFrom}</p>
+<p>Date of expiry: ${dateTo}</p>
+<br/>
+<p>To view the product's information detail, please click the following link: </p>
+<a href="${productInfoHref}" >${productInfoHref}</a>
+<br/>
+<br/>
+<br/>
+<p>PLEASE DO NOT REPLY THIS EMAIL, THIS IS AN AUTO SYSTEM SENDING!</p>
+<p>This is a post-only mailing. Replies to this message are not monitored or answered.</p>
+<p>For questions or concerns, please contact <strong>Hotline 1800650000</strong> or visit the QR code Help Center at <a href="https://scm.traxem.vn/">https://scm.traxem.vn/</a></p>
+<br/>
+<p>Thank you very much!</p>
+<br/>
+<hr/>
+<p><strong>TraXem Team</strong></p>
+<p>Contact: <strong><i><a href="mailto:traxem@vsi-international.com">traxem@vsi-international.com</a></i></strong></p>
+<p>Site: <strong><i><a href="http://traxem.vn">http://traxem.vn</a></i></strong>
+<br/>
+<br/>
+</body>
+</html>

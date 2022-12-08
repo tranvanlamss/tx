@@ -1,0 +1,24 @@
+<html>
+<head><title>TraXem</title></head>
+<body>
+<p>Hi <strong>${userName}</strong></p>
+<p>Thank you for using the TraXem application</p>
+<br/>
+<p>To complete the password reset process, Please open this link in a web browser
+<br/>
+<a href="${verifyHref}" >${verifyHref}</a>
+</p>
+<br/>
+<br/>
+<p>DO NOT REPLY THIS EMAIL, IT IS AN AUTO SYSTEM SENDING!</p>
+<br/>
+<p>Thank you very much!</p>
+<br/>
+<hr/>
+<p><strong>TraXem Team</strong></p>
+<p>Contact: <strong><i><a href="mailto:traxem@vsi-international.com">traxem@vsi-international.com</a></i></strong></p>
+<p>Site: <strong><i><a href="http://traxem.vn">http://traxem.vn</a></i></strong>
+<br/>
+<br/>
+</body>
+</html>

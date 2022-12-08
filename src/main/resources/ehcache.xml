@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.ehcache.org/v3"
+	xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
+	xsi:schemaLocation="
+            http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+            http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+	<service>
+		<jsr107:defaults enable-management="true"
+			enable-statistics="true" />
+	</service>
+	<!-- file persistance enabling -->
+	<persistence directory="./cache"></persistence>
+
+	<!-- These caches will be created -->
+	<cache alias="GlobalCache" uses-template="global-template"></cache>
+	<cache alias="AccessToken" uses-template="simple-template"><key-type>java.lang.String</key-type></cache>
+	<cache alias="UserPrincipal" uses-template="simple-template"><key-type>java.lang.String</key-type></cache>
+	<cache alias="UserPrincipalWithName" uses-template="simple-template"><key-type>java.lang.String</key-type></cache>
+	
+	<!-- the config cache tenplate -->
+	<cache-template name="global-template">
+		<key-type>java.lang.String</key-type>
+		<value-type>java.lang.Object</value-type>
+		<expiry>
+			<ttl unit="minutes">30</ttl>
+		</expiry>
+
+		<listeners>
+			<listener>
+				<class>com.vietsoft.event.CacheEventLogger</class>
+				<event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+				<event-ordering-mode>UNORDERED</event-ordering-mode>
+				<events-to-fire-on>CREATED</events-to-fire-on>
+				<events-to-fire-on>UPDATED</events-to-fire-on>
+				<events-to-fire-on>EXPIRED</events-to-fire-on>
+				<events-to-fire-on>REMOVED</events-to-fire-on>
+				<events-to-fire-on>EVICTED</events-to-fire-on>
+			</listener>
+		</listeners>
+
+		<resources>
+			<heap unit="entries">5</heap>
+			<offheap unit="MB">100</offheap>
+			<disk persistent="true" unit="MB">300</disk>
+		</resources>
+	</cache-template>
+	<cache-template name="simple-template">
+		<key-type>java.lang.String</key-type>
+		<value-type>java.lang.Object</value-type>
+		<expiry>
+			<ttl unit="minutes">30</ttl>
+		</expiry>
+
+		<listeners>
+			<listener>
+				<class>com.vietsoft.event.CacheEventLogger</class>
+				<event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+				<event-ordering-mode>UNORDERED</event-ordering-mode>
+				<events-to-fire-on>CREATED</events-to-fire-on>
+				<events-to-fire-on>EXPIRED</events-to-fire-on>
+				<events-to-fire-on>REMOVED</events-to-fire-on>
+			</listener>
+		</listeners>
+
+		<resources>
+			<heap unit="entries">2</heap>
+			<offheap unit="MB">30</offheap>
+			<disk persistent="true" unit="MB">100</disk>
+		</resources>
+	</cache-template>
+
+
+</config>
